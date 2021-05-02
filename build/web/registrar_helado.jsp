@@ -30,48 +30,24 @@
             try{
                 set = con.createStatement();
                 //necesito los parametros del formulario
-                String usuario, contraseña_admin, q;
+                String helado, contenedor, q;
+                int gramos,no_bolas, precio;
                 
-                
-                usuario = request.getParameter("usu_admin");
-                contraseña_admin = request.getParameter("contraseña_admin");
-                
+                helado = request.getParameter("helado");
+                contenedor = request.getParameter("contenedor");
+                gramos = Integer.parseInt(request.getParameter("gramos"));
+                no_bolas = Integer.parseInt(request.getParameter("bolas"));
+                precio = Integer.parseInt(request.getParameter("precio"));
                 
                             
-                q = "insert into admin(usuario, contra_admin) "
-                        + "values ('"+usuario+"', '"+contraseña_admin+"')";
+                q = "insert into helado(tipo_helado, gramos, num_bolas, contenedor,  precio) "
+                        + "values ('"+helado+"', "+gramos+", "+no_bolas+", '"+contenedor+"', "+precio+")";
                 
 
                 int registro = set.executeUpdate(q);
       
                 %>
                 <h1>Registro Exitoso</h1>
-                <form action="registrar_helado.jsp" method="post">
-                    <label for="helado">Sabor de helado</label>
-                    <br>
-                    <input name="helado" type="text" id="helado">
-                    <br>
-                    <label for="gramos">Gramos</label>
-                    <br>
-                    <input name="gramos" type="number" id="gramos">
-                    <br>
-                    <label for="bolas">No. de bolas</label>
-                    <br>
-                    <input name="bolas" id="bolas" type="number" max="2">
-                    <br>
-                    <label for="contenedor">Contenedor</label>
-                    <br>
-                    <select name="contenedor" id="contenedor">
-                        <option>Vaso</option>
-                        <option>Cono</option>
-                    </select>
-                    <br>
-                    <label for="precio">Precio</label>
-                    <br>
-                    $<input name="precio" id="precio" type="number">
-                    <br>
-                    <input type="submit" value="Registrar helado">
-                </form>
                 <%
                 set.close();
             
@@ -81,7 +57,8 @@
                 
                 %>
                 <h1>Registro No Exitoso, error en la lectura de la tabla</h1>
-                <%            
+                <%
+            
             }
             con.close();
         
