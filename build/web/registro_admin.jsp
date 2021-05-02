@@ -46,6 +46,9 @@
       
                 %>
                 <h1>Registro Exitoso</h1>
+                <hr>
+                <h3>Registrar helados</h3>
+                <br>
                 <form action="registrar_helado.jsp" method="post">
                     <label for="helado">Sabor de helado</label>
                     <br>
@@ -72,6 +75,9 @@
                     <br>
                     <input type="submit" value="Registrar helado">
                 </form>
+                <br>
+                
+                <a href="consultar.jsp"><h3>Consultar helados</h3></a>
                 <%
                 set.close();
             
@@ -92,9 +98,7 @@
             %>
             <h1>Sitio en Construccion</h1>
             <%
-        
-        }
-            
+        }    
             %>                                        
         <a href="index.html" >Regresar a la Pagina Principal</a>
     </body>
