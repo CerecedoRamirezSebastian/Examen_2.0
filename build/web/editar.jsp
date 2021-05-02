@@ -82,23 +82,7 @@
                         }catch(SQLException ed){
                             System.out.println("Error no se puede leer la tabla");
                             System.out.println(ed.getMessage());
-                            %>
-                <tr>
-                    <td>ID</td>
-                    <td> <input type="hidden" name="id2" value="<%=rs.getInt("id_usu")%>" > </td>
-                </tr>
-                <tr>
-                    <td>Nombre</td>
-                    <td> <input type="text" name="nombre2" value="<%=rs.getString("nom_usu")%>" > </td>
-                </tr>
-                <tr>
-                    <td>Ciudad</td>
-                    <td> <input type="text" name="ciudad2" value="<%=rs.getString("ciu_usu")%>" > </td>
-                </tr>
-                <tr>
-                    <td>Telefono</td>
-                    <td> <input type="text" name="tel2" value="<%=rs.getString("tel_usu")%>" > </td>
-                </tr>                
+                            %>                
                                 
                                 <%
                             
@@ -121,6 +105,9 @@
                 
             
         </table>
+        <a href="registro_admin.jsp">Regresar a la página Admin</a>
+        <br> 
+        <a href="index.html" >Regresar a la Pagina Principal</a>                       
         </form>
     </body>
 </html>

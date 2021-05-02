@@ -95,11 +95,12 @@
                         }
                         
                     %>
-                                
+        <br>                                  
         </div>
-        <br>
-        <a href="registro_admin.jsp">Regresar a la página Admin</a>
-        <br>
-        <a href="index.html" >Regresar a la Pagina Principal</a>     
+        <div>
+            <a href="registro_admin.jsp">Regresar a la página Admin</a>
+            <br>
+            <a href="index.html" >Regresar a la Pagina Principal</a>
+        </div>
     </body>
 </html>
