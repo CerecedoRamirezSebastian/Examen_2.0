@@ -72,7 +72,9 @@
         
         }
             
-            %>                                        
+            %>
+        <a href="registro_admin.jsp">Regresar a la página Admin</a>
+        <br>    
         <a href="index.html" >Regresar a la Pagina Principal</a>
     </body>
 </html>
