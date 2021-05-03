@@ -30,7 +30,7 @@
             try{
                 set = con.createStatement();
                 //necesito los parametros del formulario
-                String helado, contenedor, q;
+                String helado, contenedor, promocion, q;
                 int gramos,no_bolas, precio;
                 
                 helado = request.getParameter("helado");
@@ -38,10 +38,10 @@
                 gramos = Integer.parseInt(request.getParameter("gramos"));
                 no_bolas = Integer.parseInt(request.getParameter("bolas"));
                 precio = Integer.parseInt(request.getParameter("precio"));
-                
+                promocion = request.getParameter("promocion");
                             
-                q = "insert into helado(tipo_helado, gramos, num_bolas, contenedor,  precio) "
-                        + "values ('"+helado+"', "+gramos+", "+no_bolas+", '"+contenedor+"', "+precio+")";
+                q = "insert into helado(tipo_helado, gramos, num_bolas, contenedor,  precio, promocion) "
+                        + "values ('"+helado+"', "+gramos+", "+no_bolas+", '"+contenedor+"', "+precio+", '"+promocion+"')";
                 
 
                 int registro = set.executeUpdate(q);

@@ -76,6 +76,7 @@
                     <td>PROMOCIÓN</td>
                     <td> 
                         <select name="promocion" value="<%=rs.getString("promocion")%>">
+                            <option>0%</option>
                             <option>30%</option>
                             <option>50%</option>
                         </select>                

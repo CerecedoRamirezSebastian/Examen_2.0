@@ -59,7 +59,7 @@
                     <td><%=rs.getInt("num_bolas")%> </td>
                     <td><%=rs.getString("contenedor")%> </td>
                     <td><%=rs.getInt("precio")%> </td>
-                    <td><%=rs.getInt("promocion")%></td>
+                    <td><%=rs.getString("promocion")%></td>
                     <td> <a href="editar.jsp?id=<%=rs.getInt("id_helado")%>" >Editar</a> </td>
                     <td> <a href="borrar.jsp?id=<%=rs.getInt("id_helado")%>" >Borrar</a> </td>
                                         
