@@ -71,8 +71,16 @@
                 <tr>
                     <td>PRECIO</td>
                     <td> <input type="number" name="lana" value="<%=rs.getInt("precio")%>" > </td>
-                </tr>                
-                                
+                </tr>
+                <tr>
+                    <td>PROMOCIÓN</td>
+                    <td> 
+                        <select name="promocion" value="<%=rs.getString("promocion")%>">
+                            <option>30%</option>
+                            <option>50%</option>
+                        </select>                
+                    </td>
+                </tr>    
                                 <%
                                 
                             }

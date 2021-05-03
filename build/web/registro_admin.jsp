@@ -73,6 +73,13 @@
                     <br>
                     $<input name="precio" id="precio" type="number">
                     <br>
+                    <label for="promocion">Promoción</label>
+                    <br>
+                    <select name="promocion" id="promocion">
+                        <option>30%</option>
+                        <option>50%</option>
+                    </select>
+                    <br>
                     <input type="submit" value="Registrar helado">
                 </form>
                 <br>

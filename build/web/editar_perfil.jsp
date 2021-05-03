@@ -12,7 +12,56 @@
         <title>Editar Registro</title>
     </head>
     <body>
-        <h1>Actualizacion del Perfil</h1>
+        <% 
+            //aqui ya puedo incorporar codigo java
+            Connection con = null;
+            Statement set = null;
+            ResultSet rs = null;
+
+            String url, userName, password, driver;
+
+            url = "jdbc:mysql://localhost/examen";
+            userName = "root";
+            password = "04022004";
+
+            driver = "com.mysql.jdbc.Driver";
+
+            try{
+                Class.forName(driver);
+                con = DriverManager.getConnection(url, userName, password);
+
+                //diferentes vistas para los errores
+                //error exclusivo de sql
+                try{
+                    set = con.createStatement();
+                    //necesito los parametros del formulario
+                    String nombre, appat, apmat, calle, tel_particular, tel_celular, alcaldia, q;
+                    int num_casa, interior, dia_nac, mes_nac, ano_nac, edad;
+                    
+
+                    nombre = request.getParameter("nombre");
+                    appat = request.getParameter("appat");
+                    apmat = request.getParameter("apmat");
+                    calle = request.getParameter("calle");
+                    alcaldia = request.getParameter("alcaldia");
+                    num_casa = Integer.parseInt(request.getParameter("num_casa"));
+                    interior = Integer.parseInt(request.getParameter("interior"));                    
+                    edad = Integer.parseInt(request.getParameter("edad"));
+                    dia_nac = Integer.parseInt(request.getParameter("dia_nac"));
+                    mes_nac = Integer.parseInt(request.getParameter("mes_nac"));
+                    ano_nac = Integer.parseInt(request.getParameter("ano_nac"));
+                    tel_particular = request.getParameter("tel_particular");
+                    tel_celular = request.getParameter("tel_celular");
+
+
+                    q = "insert into usuario(nombre, appat, apmat, calle, alcaldia, num_casa, interior, dia_nac, mes_nac, ano_nac, tel_particular, tel_celular, edad) "
+                            + "values ('"+nombre+"', '"+appat+"', '"+apmat+"', '"+calle+"', '"+alcaldia+"', "+num_casa+", "+interior+", "+dia_nac+", "+mes_nac+", "+ano_nac+", '"+tel_particular+"', '"+tel_celular+"', "+edad+")";
+                    
+                    Object ;
+                    int registro = set.executeUpdate(q);
+
+        %>
+                <h1>Actualizacion del Perfil</h1>
         <br>
             
             <table border="2" width="100%" >
@@ -44,7 +93,7 @@
                             rs = set.executeQuery(q);
                             while(rs.next()){
                                 %>
-                <% System.out.println("HOLA");%> 
+
                 <tr>
                     <td>ID</td>
                     <td> <input type="hidden" name="id_usuario" value="<%=rs.getInt("id_usu")%>" > </td>
