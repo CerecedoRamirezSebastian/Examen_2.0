@@ -12,9 +12,9 @@
         <title>Editar Registro</title>
     </head>
     <body>
-        <h1>Actualizacion de los Helados</h1>
+        <h1>Actualizacion del Perfil</h1>
         <br>
-        <form method="get" name="formularioeditar" action="actualizar.jsp">    
+            
             <table border="2" width="100%" >
                 <%
                     //aqui ya puedo incorporar codigo java
@@ -27,6 +27,7 @@
                     password = "04022004";
                     driver = "com.mysql.jdbc.Driver";
                     
+                     
                     try{
                         Class.forName(driver);
                         con = DriverManager.getConnection(url, userName, password);
@@ -38,42 +39,72 @@
                         
                             id = Integer.parseInt(request.getParameter("id"));
                             
-                            q = "select * from helado where id_helado="+id;
+                            q = "select * from usuario where id_usu="+id;
                             
                             rs = set.executeQuery(q);
                             while(rs.next()){
                                 %>
+                <% System.out.println("HOLA");%> 
                 <tr>
                     <td>ID</td>
-                    <td> <input type="hidden" name="id_h" value="<%=rs.getInt("id_helado")%>" > </td>
+                    <td> <input type="hidden" name="id_usuario" value="<%=rs.getInt("id_usu")%>" > </td>
                 </tr>
                 <tr>
-                    <td>HELADO</td>
-                    <td> <input type="text" name="sabor" value="<%=rs.getString("tipo_helado")%>" > </td>
+                    <td>NOMBRE</td>
+                    <td> <input type="text" name="name" value="<%=rs.getString("nombre")%>" > </td>
                 </tr>
                 <tr>
-                    <td>GRAMOS</td>
-                    <td> <input type="number" name="grs" value="<%=rs.getInt("gramos")%>" > </td>
+                    <td>APELLIDO PATERNO</td>
+                    <td> <input type="text" name="apepat" value="<%=rs.getString("appat")%>" > </td>
                 </tr>
                 <tr>
-                    <td>NO. DE BOLAS</td>
-                    <td> <input type="number" name="bolas_num" value="<%=rs.getInt("num_bolas")%>" > </td>
+                    <td>APELLIDO MATERNO</td>
+                    <td> <input type="text" name="apema" value="<%=rs.getString("apmat")%>" > </td>
                 </tr>
                 <tr>
-                    <td>CONTENEDOR</td>
-                    <td> 
-                        <select name="cont" value="<%=rs.getString("contenedor")%>">
-                            <option>Vaso</option>
-                            <option>Cono</option>
-                        </select>
-                    </td>
+                    <td>CALLE</td>
+                    <td> <input type="text" name="street" value="<%=rs.getString("calle")%>" > </td>
                 </tr>
                 <tr>
-                    <td>PRECIO</td>
-                    <td> <input type="number" name="lana" value="<%=rs.getInt("precio")%>" > </td>
-                </tr>                
-                                
-                                <%
+                    <td>ALCALDÍA</td>
+                    <td> <input type="text" name="alcal" value="<%=rs.getString("alcaldia")%>" > </td>
+                </tr>
+                
+                <td>
+                    <td>NO. DE CASA</td>
+                    <td> <input type="number" name="casa" value="<%=rs.getInt("num_casa")%>" > </td>                
+                </td>                
+                <td>
+                    <td>INTERIOR</td>
+                    <td> <input type="number" name="inte" value="<%=rs.getInt("interior")%>" > </td>                
+                </td>                
+                <td>
+                    <td>DÍA DE NACIMIENTO</td>
+                    <td> <input type="number" name="dia" value="<%=rs.getInt("dia_nac")%>" > </td>                
+                </td>
+                <td>
+                    <td>MES DE NACIMIENTO</td>
+                    <td> <input type="number" name="mes" value="<%=rs.getInt("mes_nac")%>" > </td>                
+                </td>
+                <td>
+                    <td>AÑO DE NACIMIENTO</td>
+                    <td> <input type="number" name="ano" value="<%=rs.getInt("ano_nac")%>" > </td>                
+                </td>
+                <td>
+                    <td>TELÉFONO PARTICULAR</td>
+                    <td> <input type="text" name="particular" value="<%=rs.getString("tel_particular")%>" > </td>                
+                </td>
+                <td>
+                    <td>TELÉFONO CELULAR</td>
+                    <td> <input type="text" name="celular" value="<%=rs.getString("tel_celular")%>" > </td>                
+                </td>
+                <td>
+                    <td>EDAD</td>
+                    <td> <input type="number" name="edad" value="<%=rs.getInt("edad")%>" > </td>                
+                </td>
+                
+                
+                <%
                                 
                             }
                             rs.close();
@@ -107,8 +138,8 @@
             </table>
          
             <input type="submit" value="Actualizar">                       
-        </form>
-    <a href="registro_admin.jsp">Regresar a la página Admin</a>
+        
+    
     <br> 
     <a href="index.html" >Regresar a la Pagina Principal</a>
     </body>

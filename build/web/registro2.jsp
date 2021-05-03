@@ -30,8 +30,8 @@
             try{
                 set = con.createStatement();
                 //necesito los parametros del formulario
-                String nombre, appat, apmat, calle, alcaldia, q;
-                int num_casa, interior, dia_nac, mes_nac, ano_nac, tel_particular, tel_celular, edad;
+                String nombre, appat, apmat, calle, tel_particular, tel_celular, alcaldia, q;
+                int num_casa, interior, dia_nac, mes_nac, ano_nac,  edad;
                 
                 nombre = request.getParameter("nombre");
                 appat = request.getParameter("appat");
@@ -44,18 +44,19 @@
                 dia_nac = Integer.parseInt(request.getParameter("dia_nac"));
                 mes_nac = Integer.parseInt(request.getParameter("mes_nac"));
                 ano_nac = Integer.parseInt(request.getParameter("ano_nac"));
-                tel_particular = Integer.parseInt(request.getParameter("tel_particular"));
-                tel_celular = Integer.parseInt(request.getParameter("tel_celular"));
+                tel_particular = request.getParameter("tel_particular");
+                tel_celular = request.getParameter("tel_celular");
                 
                             
                 q = "insert into usuario(nombre, appat, apmat, calle, alcaldia, num_casa, interior, dia_nac, mes_nac, ano_nac, tel_particular, tel_celular, edad) "
-                        + "values ('"+nombre+"', '"+appat+"', '"+apmat+"', '"+calle+"', '"+alcaldia+"', "+num_casa+", "+interior+", "+dia_nac+", "+mes_nac+", "+ano_nac+", "+tel_particular+", "+tel_celular+", "+edad+")";
+                        + "values ('"+nombre+"', '"+appat+"', '"+apmat+"', '"+calle+"', '"+alcaldia+"', "+num_casa+", "+interior+", "+dia_nac+", "+mes_nac+", "+ano_nac+", '"+tel_particular+"', '"+tel_celular+"', "+edad+")";
                 
 
                 int registro = set.executeUpdate(q);
       
                 %>
                 <h1>Registro Exitoso</h1>
+                <a href="editar_perfil.jsp"><h4>Editar perfil</h4></a>
                 <%
                 set.close();
             

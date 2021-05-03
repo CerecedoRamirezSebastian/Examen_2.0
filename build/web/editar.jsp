@@ -12,7 +12,7 @@
         <title>Editar Registro</title>
     </head>
     <body>
-        <h1>Actualizacion del Perfil</h1>
+        <h1>Actualizacion de los Helados</h1>
         <br>
         <form method="get" name="formularioeditar" action="actualizar.jsp">    
             <table border="2" width="100%" >
