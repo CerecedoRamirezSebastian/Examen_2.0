@@ -135,7 +135,7 @@
          
             <input type="submit" value="Actualizar">                       
         </form>
-    <a href="consultar_usu.jps">Regresar a edición</a>
+    <a href="consultar_usu.jsp">Regresar a edición</a>
     <br> 
     <a href="index.html" >Regresar a la Pagina Principal</a>
     </body>
