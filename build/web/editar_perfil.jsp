@@ -6,64 +6,16 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*, java.util.*, java.text.*" %>
 <!DOCTYPE html>
+<link rel="stylesheet" href="./CSS/estilo.css">
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Editar Registro</title>
     </head>
     <body>
-        <% 
-            //aqui ya puedo incorporar codigo java
-            Connection con = null;
-            Statement set = null;
-            ResultSet rs = null;
-
-            String url, userName, password, driver;
-
-            url = "jdbc:mysql://localhost/examen";
-            userName = "root";
-            password = "04022004";
-
-            driver = "com.mysql.jdbc.Driver";
-
-            try{
-                Class.forName(driver);
-                con = DriverManager.getConnection(url, userName, password);
-
-                //diferentes vistas para los errores
-                //error exclusivo de sql
-                try{
-                    set = con.createStatement();
-                    //necesito los parametros del formulario
-                    String nombre, appat, apmat, calle, tel_particular, tel_celular, alcaldia, q;
-                    int num_casa, interior, dia_nac, mes_nac, ano_nac, edad;
-                    
-
-                    nombre = request.getParameter("nombre");
-                    appat = request.getParameter("appat");
-                    apmat = request.getParameter("apmat");
-                    calle = request.getParameter("calle");
-                    alcaldia = request.getParameter("alcaldia");
-                    num_casa = Integer.parseInt(request.getParameter("num_casa"));
-                    interior = Integer.parseInt(request.getParameter("interior"));                    
-                    edad = Integer.parseInt(request.getParameter("edad"));
-                    dia_nac = Integer.parseInt(request.getParameter("dia_nac"));
-                    mes_nac = Integer.parseInt(request.getParameter("mes_nac"));
-                    ano_nac = Integer.parseInt(request.getParameter("ano_nac"));
-                    tel_particular = request.getParameter("tel_particular");
-                    tel_celular = request.getParameter("tel_celular");
-
-
-                    q = "insert into usuario(nombre, appat, apmat, calle, alcaldia, num_casa, interior, dia_nac, mes_nac, ano_nac, tel_particular, tel_celular, edad) "
-                            + "values ('"+nombre+"', '"+appat+"', '"+apmat+"', '"+calle+"', '"+alcaldia+"', "+num_casa+", "+interior+", "+dia_nac+", "+mes_nac+", "+ano_nac+", '"+tel_particular+"', '"+tel_celular+"', "+edad+")";
-                    
-                    Object ;
-                    int registro = set.executeUpdate(q);
-
-        %>
-                <h1>Actualizacion del Perfil</h1>
+        <h1>Actualizacion del Perfil</h1>
         <br>
-            
+        <form method="get" name="formularioeditar" action="perfil_usu.jsp">    
             <table border="2" width="100%" >
                 <%
                     //aqui ya puedo incorporar codigo java
@@ -76,7 +28,6 @@
                     password = "04022004";
                     driver = "com.mysql.jdbc.Driver";
                     
-                     
                     try{
                         Class.forName(driver);
                         con = DriverManager.getConnection(url, userName, password);
@@ -93,7 +44,6 @@
                             rs = set.executeQuery(q);
                             while(rs.next()){
                                 %>
-
                 <tr>
                     <td>ID</td>
                     <td> <input type="hidden" name="id_usuario" value="<%=rs.getInt("id_usu")%>" > </td>
@@ -104,11 +54,27 @@
                 </tr>
                 <tr>
                     <td>APELLIDO PATERNO</td>
-                    <td> <input type="text" name="apepat" value="<%=rs.getString("appat")%>" > </td>
+                    <td> <input type="text" name="apapat" value="<%=rs.getString("appat")%>" > </td>
                 </tr>
                 <tr>
                     <td>APELLIDO MATERNO</td>
-                    <td> <input type="text" name="apema" value="<%=rs.getString("apmat")%>" > </td>
+                    <td> <input type="text" name="apemat" value="<%=rs.getString("apmat")%>" > </td>
+                </tr>
+                <tr>
+                    <td>EDAD</td>
+                    <td> <input type="number" name="edad" value="<%=rs.getInt("edad")%>" ></td>
+                </tr>
+                <tr>
+                    <td>DÍA DE NACIMIENTO</td>
+                    <td> <input type="number" name="dia" value="<%=rs.getInt("dia_nac")%>" > </td>
+                </tr>
+                <tr>
+                    <td>MES DE NACIMIENTO</td>
+                    <td> <input type="number" name="mes" value="<%=rs.getInt("mes_nac")%>" > </td>
+                </tr>
+                <tr>
+                    <td>AÑO DE NACIMIENTO</td>
+                    <td> <input type="number" name="ano" value="<%=rs.getInt("ano_nac")%>" > </td>
                 </tr>
                 <tr>
                     <td>CALLE</td>
@@ -118,42 +84,23 @@
                     <td>ALCALDÍA</td>
                     <td> <input type="text" name="alcal" value="<%=rs.getString("alcaldia")%>" > </td>
                 </tr>
-                
-                <td>
-                    <td>NO. DE CASA</td>
-                    <td> <input type="number" name="casa" value="<%=rs.getInt("num_casa")%>" > </td>                
-                </td>                
-                <td>
+                <tr>
+                    <td>NO.CASA</td>
+                    <td> <input type="number" name="casa" value="<%=rs.getInt("num_casa")%>" > </td>
+                </tr>
+                <tr>
                     <td>INTERIOR</td>
-                    <td> <input type="number" name="inte" value="<%=rs.getInt("interior")%>" > </td>                
-                </td>                
-                <td>
-                    <td>DÍA DE NACIMIENTO</td>
-                    <td> <input type="number" name="dia" value="<%=rs.getInt("dia_nac")%>" > </td>                
-                </td>
-                <td>
-                    <td>MES DE NACIMIENTO</td>
-                    <td> <input type="number" name="mes" value="<%=rs.getInt("mes_nac")%>" > </td>                
-                </td>
-                <td>
-                    <td>AÑO DE NACIMIENTO</td>
-                    <td> <input type="number" name="ano" value="<%=rs.getInt("ano_nac")%>" > </td>                
-                </td>
-                <td>
+                    <td> <input type="number" name="inte" value="<%=rs.getInt("interior")%>" > </td>
+                </tr>
+                <tr>
                     <td>TELÉFONO PARTICULAR</td>
-                    <td> <input type="text" name="particular" value="<%=rs.getString("tel_particular")%>" > </td>                
-                </td>
-                <td>
+                    <td> <input type="text" name="particular" value="<%=rs.getString("tel_particular")%>" > </td>
+                </tr>
+                <tr>
                     <td>TELÉFONO CELULAR</td>
-                    <td> <input type="text" name="celular" value="<%=rs.getString("tel_celular")%>" > </td>                
-                </td>
-                <td>
-                    <td>EDAD</td>
-                    <td> <input type="number" name="edad" value="<%=rs.getInt("edad")%>" > </td>                
-                </td>
-                
-                
-                <%
+                    <td> <input type="text" name="celular" value="<%=rs.getString("tel_celular")%>" > </td>
+                </tr>   
+                                <%
                                 
                             }
                             rs.close();
@@ -187,8 +134,8 @@
             </table>
          
             <input type="submit" value="Actualizar">                       
-        
-    
+        </form>
+    <a href="consultar_usu.jps">Regresar a edición</a>
     <br> 
     <a href="index.html" >Regresar a la Pagina Principal</a>
     </body>

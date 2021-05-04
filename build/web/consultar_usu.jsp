@@ -20,12 +20,19 @@
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Helado</th>
-                        <th>Gramos</th>
-                        <th>No. de bolas</th>
-                        <th>Contenedor</th>
-                        <th>Precio</th>
-                        <th>Promoción</th>
+                        <th>Nombre</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
+                        <th>Edad</th>
+                        <th>Día de nacimiento</th>
+                        <th>Mes de nacimiento</th>
+                        <th>Año de nacimiento</th>
+                        <th>Calle</th>
+                        <th>Alcaldía</th>
+                        <th>No. de casa</th>
+                        <th>Interior</th>
+                        <th>Tel. Particular</th>
+                        <th>Tel. Celular</th>
                     </tr>        
                 </thead>
                 <tbody>
@@ -48,21 +55,28 @@
                                 //necesito los parametros del formulario
                                 String q;
                                 
-                                q = "select * from helado";
+                                q = "select * from usuario";
                                 
                                 rs = set.executeQuery(q);
                                 while(rs.next()){
                                     %>
                 <tr>
-                    <td><%=rs.getInt("id_helado")%> </td>
-                    <td><%=rs.getString("tipo_helado")%> </td>
-                    <td><%=rs.getInt("gramos")%> </td>
-                    <td><%=rs.getInt("num_bolas")%> </td>
-                    <td><%=rs.getString("contenedor")%> </td>
-                    <td><%=rs.getInt("precio")%> </td>
-                    <td><%=rs.getString("promocion")%></td>
-                    <td> <a href="editar.jsp?id=<%=rs.getInt("id_helado")%>" >Editar</a> </td>
-                    <td> <a href="borrar.jsp?id=<%=rs.getInt("id_helado")%>" >Borrar</a> </td>
+                    <td><%=rs.getInt("id_usu")%> </td>
+                    <td><%=rs.getString("nombre")%> </td>
+                    <td><%=rs.getString("appat")%> </td>
+                    <td><%=rs.getString("apmat")%> </td>
+                    <td><%=rs.getString("calle")%> </td>
+                    <td><%=rs.getString("alcaldia")%> </td>
+                    <td><%=rs.getInt("num_casa")%></td>
+                    <td><%=rs.getInt("interior")%></td>
+                    <td><%=rs.getInt("dia_nac")%></td>
+                    <td><%=rs.getInt("mes_nac")%></td>
+                    <td><%=rs.getInt("ano_nac")%></td>
+                    <td><%=rs.getString("tel_particular")%></td>
+                    <td><%=rs.getString("tel_celular")%></td>
+                    <td><%=rs.getInt("edad")%></td>
+                    <td> <a href="editar_perfil.jsp?id=<%=rs.getInt("id_usu")%>" >Editar</a> </td>
+                    <td> <a href="borrar_usu.jsp?id=<%=rs.getInt("id_usu")%>" >Borrar</a> </td>
                                         
                 </tr>                
                                     
@@ -101,7 +115,7 @@
         <br>                                  
         </div>
         <div>
-            <a href="registro_admin.jsp">Regresar a la página Admin</a>
+            
             <br>
             <a href="index.html" >Regresar a la Pagina Principal</a>
         </div>

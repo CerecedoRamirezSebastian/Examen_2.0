@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*, java.util.*, java.text.*" %>
 <!DOCTYPE html>
+<link rel="stylesheet" href="./CSS/estilo.css">
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -56,7 +57,7 @@
       
                 %>
                 <h1>Registro Exitoso</h1>
-                <a href="editar_perfil.jsp"><h4>Editar perfil</h4></a>
+                <a href="consultar_usu.jsp"><h4>Editar perfil</h4></a>
                 <%
                 set.close();
             

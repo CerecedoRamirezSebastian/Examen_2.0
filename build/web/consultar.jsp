@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*, java.util.*, java.text.*" %>
 <!DOCTYPE html>
+<link rel="stylesheet" href="./CSS/estilo.css">
 
 <html>
     <head>

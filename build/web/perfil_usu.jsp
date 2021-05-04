@@ -5,6 +5,7 @@
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*, java.util.*, java.text.*" %>
 <!DOCTYPE html>
+<link rel="stylesheet" href="./CSS/estilo.css">
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -52,7 +53,7 @@
                         id_usuario = Integer.parseInt(request.getParameter("id_usuario"));
                         
                         q = "update usuario set "
-                                + "nombre = '"+name+"', appat = '"+apepat+"', appmat = '"+apema+"', calle = '"+street+"', alcaldia = '"+alcal+"', num_casa = "+casa+", interior = "+inte+", dia_nac = "+dia+", mes_nac = "+mes+", ano_nac = "+ano+", tel_particular = '"+particular+"', tel_celular = '"+celular+"', edad = "+edad+" where id_usu = "+id_usuario+"";
+                                + "nombre = '"+name+"', appat = '"+apepat+"', apmat = '"+apema+"', calle = '"+street+"', alcaldia = '"+alcal+"', num_casa = "+casa+", interior = "+inte+", dia_nac = "+dia+", mes_nac = "+mes+", ano_nac = "+ano+", tel_particular = '"+particular+"', tel_celular = '"+celular+"', edad = "+edad+" where id_usu = "+id_usuario+"";
                         
                         int actualizar = set.executeUpdate(q);
                         
@@ -84,7 +85,7 @@
             
             %>
         
-
+        <a href="consultar_usu.jps">Regresar a edición</a>
         <br>
         <a href="index.html" >Regresar a la Pagina Principal</a>  
         
