@@ -4,134 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
     <title>Login</title>
 
 </head>
-<body>
+<body style="background-image: url(./IMG/fondo7png.png); background-attachment: fixed;">
     <script src="./JS/validacion.js"></script> 
         <nav>
             <br>
         </nav>
-        <div class="id-card-container">
-            <div class="card">
+        <div class="id-card-container1">
                 <h1>LOGIN</h1>
                 <form action="login_usuario.jsp" onsubmit="return iniciar_sesionu()">
-                    <label for="tel_cel">Ingresa tu número de celular</label>
                     <br>
-                    <input type="number" name="tel_cel" id="tel_cel" value="55">
+                    <input class="texto" type="number" name="tel_cel" id="tel_cel" placeholder="TEL. CELULAR">
                     <br>
-                    <input type="submit" value="Ingresar">
+                    <input type="submit" value="Ingresar" class="boton">
                 </form>
-            </div>
         </div>
 
         <br>
 
-        <div class="id-card-container">
-            <div class="card">
-                <div>
-                    <h4>REGISTRAR USUARIO</h4>
+        <div class="id-card-container2">
+                    <h4>REGISTRAR</h4>
 
                     <form action="registro2.jsp" name="formulario_usu" method="post" onsubmit="return registraru()">
-                        <label for="nombre">Ingresa tu Nombre</label>
                         <br>
-                        <input type="text" name="nombre" id="nombre" placeholder="Tu NOMBRE aquí">
+                        <input class="texto" type="text" name="nombre" id="nombre" placeholder="Tu NOMBRE aquí">
                         <br>
-                        <label for="appat">Ingresa tu Apellido Paterno</label>
+                        <input class="texto" type="text" name="appat" id="appat" placeholder="Apellido PATERNO">
                         <br>
-                        <input type="text" name="appat" id="appat" placeholder="Apellido PATERNO">
+                        <input class="texto" type="text" name="apmat" id="apmat" placeholder="Apellido MATERNO">
                         <br>
-                        <label for="apmat">Ingresa tu Apellido Materno</label>
+                        <input class="texto" type="number" name="edad" id="edad" placeholder="Tu EDAD aquí" max="100">
                         <br>
-                        <input type="text" name="apmat" id="apmat" placeholder="Apellido MATERNO">
+                        <input class="texto" type="number" name="dia_nac" id="dia_nac" placeholder="DÍA">
                         <br>
-                        <label for="edad">Ingresa tu Edad</label>
+                        <input class="texto" type="number" name="mes_nac" id="mes_nac"  placeholder="MES">
                         <br>
-                        <input type="number" name="edad" id="edad" placeholder="Tu EDAD aquí" max="100">
+                        <input class="texto" type="number" name="ano_nac" id="ano_nac" placeholder="AÑO">
                         <br>
-                        <label for="dia_nac">Ingresa tu DÍA DE NACIMIENTO</label>
+                        <input class="texto" type="text" name="calle" id="calle" placeholder="CALLE">
                         <br>
-                        <input type="number" name="dia_nac" id="dia_nac" placeholder="DÍA">
+                        <input class="texto" type="text" name="alcaldia" id="alcaldia" placeholder="ALCALDÍA">
                         <br>
-                        <label for="mes_nac">Ingresa tu MES DE NACIMIENTO</label>
+                        <input class="texto" type="number" name="num_casa" id="num_casa" placeholder="NO. DE CASA">
                         <br>
-                        <input type="number" name="mes_nac" id="mes_nac"  placeholder="MES">
+                        <input class="texto" type="number" name="interior" id="interior" placeholder="INTERIOR">
                         <br>
-                        <label for="ano_nac">Ingresa tu AÑO DE NACIMIENTO</label>
+                        <input class="texto" type="text" name="tel_particular" id="tel_particular" placeholder="TEL. FIJO">
                         <br>
-                        <input type="number" name="ano_nac" id="ano_nac" placeholder="AÑO">
+                        <input class="texto" type="text" name="tel_celular" id="tel_celular" placeholder="TEL. CELULAR">
                         <br>
-                        <label for="calle">Ingresa tu CALLE</label>
-                        <br>
-                        <input type="text" name="calle" id="calle" placeholder="CALLE">
-                        <br>
-                        <label for="alcaldia">Ingresa tu ALCALDÍA</label>
-                        <br>
-                        <input type="text" name="alcaldia" id="alcaldia" placeholder="ALCALDÍA">
-                        <br>
-                        <label for="num_casa">Ingresa tu NO. DE CASA</label>
-                        <br>
-                        <input type="number" name="num_casa" id="num_casa" placeholder="NO. DE CASA">
-                        <br>
-                        <label for="interior">Ingresa tu INTERIOR (Si es que tiene)</label>
-                        <br>
-                        <input type="number" name="interior" id="interior" placeholder="INTERIOR">
-                        <br>
-                        <label for="tel_particular">Ingresa tu TELÉFONO PARTICULAR</label>
-                        <br>
-                        <input type="text" name="tel_particular" id="tel_particular" placeholder="TEL. FIJO">
-                        <br>
-                        <label for="tel_celular">Ingresa tu número de celular</label>
-                        <br>
-                        <input type="text" name="tel_celular" id="tel_celular" value="55">
-                        <br>
-                        <input type="submit" value="Registrar Usuarios">
+                        <input type="submit" value="Registrar Usuarios" class="boton">
                     </form>
-                </div>
-            </div>
         </div>
 
 
-        <div class="id-card-container">
-            <div class="card">
-                <div>
-                    <h4>LOGIN de ADMINISTRADOR</h4>
+        <div class="id-card-container3">
+                    <h4>LOGIN DEL ADMINISTRADOR</h4>
                     <form action="login_admin.jsp" method="post" onsubmit="return iniciar_sesiona()">
-                        <label for="usuario_admin">Ingrese su USUARIO</label>
                         <br>
-                        <input name="usuario_admin" type="text" id="usuario_admin">
+                        <input class="texto" name="usuario_admin" type="text" id="usuario_admin" placeholder="USUARIO">
                         <br>
-                        <label for="contra_admin">Ingrese su CONTRASEÑA</label>
+                        <input class="texto" name="contra_admin" type="password" id="contra_admin" placeholder="CONTRASEÑA">
                         <br>
-                        <input name="contra_admin" type="password" id="contra_admin">
-                        <br>
-                        <input type="submit" value="Iniciar sesión">
+                        <input type="submit" value="Iniciar sesión" class="boton">
                     </form>
-                </div>
-            </div>
         </div>
 
 
-        <div class="id-card-container">
-            <div class="card">
-                <div>
+        <div class="id-card-container4">
                     <h4>REGISTRAR ADMINISTRADOR</h4>
                     <form action="registro_admin.jsp" method="post" onsubmit="return registrara()">
-                        <label for="usu_admin">USUARIO</label>
                         <br>
-                        <input name="usu_admin" type="text" id="usu_admin">
+                        <input class="texto" name="usu_admin" type="text" id="usu_admin" placeholder="USUARIO">
                         <br>
-                        <label for="contraseña_admin">CONTRASEÑA</label>
+                        <input class="texto" name="contraseña_admin" type="password" id="contraseña_admin" placeholder="CONTRASEÑA">
                         <br>
-                        <input name="contraseña_admin" type="password" id="contraseña_admin">
-                        <br>
-                        <input type="submit" value="Registrar Administrador">
+                        <input type="submit" value="Registrar Administrador" class="boton">
                     </form>
-                </div>
-            </div>
         </div>
 
         <br>

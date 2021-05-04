@@ -1,81 +1,72 @@
 *{
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-family: Arial;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    background-color: rgb(0, 153, 255);
+.id-card-container1 h1{
+    margin-left: 42%;
+    padding-top: 40px;
 }
 
-h1, h2, h3, h4, h5, label, li{
-    font-family: 'Roboto', sans-serif;
+.id-card-container2 h4{
+    margin-left: 35%;
+    padding-top: 70px;
+}
+
+.id-card-container3 h4{
+    margin-left: 10%;
+    padding-top: 70px;
+}
+
+.id-card-container4 h4{
+    margin-left: 10%;
+    padding-top: 70px;
+}
+
+.texto{
+    margin-top: 7px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    margin: 10px;
+    font-size: 17px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+div{
+    width: 40%;
+    margin-left: 31%; 
+}
+
+h1, h4{
+    font-size: 30px;
+}
+
+.boton{
+    width: 50%;
+    background-color: #40916c;
     color: white;
-    margin: 0px;
-    padding: 16px;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-left: 25%;
 }
 
-input{
-    margin: 0px;
-    padding: 8px;
-}
-
-.menu {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    background-color: #286785;
-    padding: 0px;
-    box-shadow: 4px 0px 0px 0px rgba(26, 85, 145, 0.04);
-  }
-
-  .menu-item{
-    margin: 0px;
-    padding: 16px;
-    height: inherit;
-    width: max-content;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-
-  .menu-item:hover{
-    background-color: #1f477e;
-  }
-
-  .menu-item a{
+footer{
+    padding-left: 5%;
     color: white;
-    text-decoration: none;
-  }
+    background-color: white;
+    padding: 70px;
+    background-color: #1b4332;
+}
 
-  .menu-item a:focus{
-    opacity: 0.5;
-  }
+footer h5{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
 
-  .menu-item a:visited{
-    opacity: 0.8;
-  }
-
-  .id-card-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .subtitle{
-    margin-left: 32px;
-  }
-  .card{
-    border-style: solid;
-    border-radius: 16px;
-    border-width: 1px;
-    border-color: #0053c0;
-    width: 250px;
-    height: max-content;
-    padding: 32px;
-    margin-bottom: 32px;
-  }
-
-  .card:hover {
-    box-shadow: 4px 4px 8px 0px rgba(38, 87, 151, 0.5);
-  }
+footer li{
+    font-size: 20px;
+    padding-bottom: 5px;
+}
