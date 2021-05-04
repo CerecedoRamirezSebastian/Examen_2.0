@@ -40,7 +40,7 @@ function registraru(){
         return false;
     }
     
-    if(cadena6<1 || cadena>12){
+    if(cadena6<1 || cadena6>12){
         alert(" Mes inválido");
         return false;
     }
@@ -79,8 +79,8 @@ function registraru(){
 
 
 function registrara(){
-   var usuario = document.getElementById("usu_admin");
-    var contraseña = document.getElementById("contraseña_admin");
+   var usuario = document.getElementById("usu_admin").value;
+    var contraseña = document.getElementById("contraseña_admin").value;
     
     if(usuario === ""){
         alert("Campo usuario vacío");
@@ -96,14 +96,15 @@ function registrara(){
 
 
 function iniciar_sesiona(){
-    var usuario = document.getElementById("usuario_admin");
-    var contraseña = document.getElementById("contra_admin");
+    var usuario = document.getElementById("usuario_admin").value;
+    var contraseña = document.getElementById("contra_admin").value;
     
     if(usuario === ""){
         alert("Campo usuario vacío");
         return false;
     }
     
+
     if(contraseña === ""){
         alert("Campo contraseña vacío");
         return false;
@@ -112,11 +113,15 @@ function iniciar_sesiona(){
 
 
 function iniciar_sesionu(){
-    var telefono = document.getElementById("tel_cel");
+    var telefono = document.getElementById("tel_cel").value;
     var pat4 = new RegExp(/(\d{10})/);
 
-    if(pat4.test(telefono)){
-        alert("Campo usuario vacío");
+    if(pat4.test(telefono) === false){
+        alert("Teléfono inválido");
+        return false;
+    }
+    if(telefono === ""){
+        alert("Campo teléfono vacío");
         return false;
     }
 }
