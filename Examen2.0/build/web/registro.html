@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/estilo.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    </head>
+    <body>
+        <div>
+            <form action="registro2.jsp" name="formulario_usu" method="post">
+                <label for="nombre">Ingresa tu Nombre</label>
+                <br>
+                <input type="text" name="nombre" id="nombre" placeholder="Tu NOMBRE aquí">
+                <br>
+                <label for="appat">Ingresa tu Apellido Paterno</label>
+                <br>
+                <input type="text" name="appat" id="appat" placeholder="Apellido PATERNO">
+                <br>
+                <label for="apmat">Ingresa tu Apellido Materno</label>
+                <br>
+                <input type="text" name="apmat" id="apmat" placeholder="Apellido MATERNO">
+                <br>
+                <label for="edad">Ingresa tu Edad</label>
+                <br>
+                <input type="number" name="edad" id="edad" placeholder="Tu EDAD aquí" max="100">
+                <br>
+                <label for="dia_nac">Ingresa tu DÍA DE NACIMIENTO</label>
+                <br>
+                <input type="number" name="dia_nac" id="dia_nac" max="31" placeholder="DÍA">
+                <br>
+                <label for="mes_nac">Ingresa tu MES DE NACIMIENTO</label>
+                <br>
+                <input type="number" name="mes_nac" id="mes_nac" max="12" placeholder="MES">
+                <br>
+                <label for="ano_nac">Ingresa tu AÑO DE NACIMIENTO</label>
+                <br>
+                <input type="number" name="ano_nac" id="ano_nac" min="1920" max="2021" placeholder="AÑO">
+                <br>
+                <label for="calle">Ingresa tu CALLE</label>
+                <br>
+                <input type="text" name="calle" id="calle" placeholder="CALLE">
+                <br>
+                <label for="alcaldia">Ingresa tu ALCALDÍA</label>
+                <br>
+                <input type="text" name="alcaldia" id="alcaldia" placeholder="ALCALDÍA">
+                <br>
+                <label for="num_casa">Ingresa tu NO. DE CASA</label>
+                <br>
+                <input type="number" name="num_casa" id="num_casa" placeholder="NO. DE CASA">
+                <br>
+                <label for="interior">Ingresa tu INTERIOR (Si es que tiene)</label>
+                <br>
+                <input type="number" name="interior" id="interior" placeholder="INTERIOR">
+                <br>
+                <label for="tel_particular">Ingresa tu TELÉFONO PARTICULAR</label>
+                <br>
+                <input type="number" name="tel_particular" id="tel_particular" placeholder="TEL. FIJO">
+                <br>
+                <label for="tel_celular">Ingresa tu número de celular</label>
+                <br>
+                <input type="number" name="tel_celular" id="tel_celular" value="55">
+                <br>
+                <input type="submit" value="Registrar Usuarios">
+            </form>
+        </div>
+    </body>
+</html>

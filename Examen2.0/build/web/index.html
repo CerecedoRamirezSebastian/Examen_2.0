@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
+    <title>Login</title>
+
+</head>
+<body style="background-image: url(./IMG/fondo7png.png); background-attachment: fixed;">
+    <script src="./JS/validacion.js"></script> 
+        <nav>
+            <br>
+        </nav>
+        <div class="id-card-container1">
+                <h1>LOGIN</h1>
+                <form action="login_usuario.jsp" onsubmit="return iniciar_sesionu()">
+                    <br>
+                    <input class="texto" type="number" name="tel_cel" id="tel_cel" placeholder="TEL. CELULAR">
+                    <br>
+                    <input type="submit" value="Ingresar" class="boton">
+                </form>
+        </div>
+
+        <br>
+
+        <div class="id-card-container2">
+                    <h4>REGISTRAR</h4>
+
+                    <form action="registro2.jsp" name="formulario_usu" method="post" onsubmit="return registraru()">
+                        <br>
+                        <input class="texto" type="text" name="nombre" id="nombre" placeholder="Tu NOMBRE aquí">
+                        <br>
+                        <input class="texto" type="text" name="appat" id="appat" placeholder="Apellido PATERNO">
+                        <br>
+                        <input class="texto" type="text" name="apmat" id="apmat" placeholder="Apellido MATERNO">
+                        <br>
+                        <input class="texto" type="number" name="edad" id="edad" placeholder="Tu EDAD aquí" max="100">
+                        <br>
+                        <input class="texto" type="number" name="dia_nac" id="dia_nac" placeholder="DÍA">
+                        <br>
+                        <input class="texto" type="number" name="mes_nac" id="mes_nac"  placeholder="MES">
+                        <br>
+                        <input class="texto" type="number" name="ano_nac" id="ano_nac" placeholder="AÑO">
+                        <br>
+                        <input class="texto" type="text" name="calle" id="calle" placeholder="CALLE">
+                        <br>
+                        <input class="texto" type="text" name="alcaldia" id="alcaldia" placeholder="ALCALDÍA">
+                        <br>
+                        <input class="texto" type="number" name="num_casa" id="num_casa" placeholder="NO. DE CASA">
+                        <br>
+                        <input class="texto" type="number" name="interior" id="interior" placeholder="INTERIOR">
+                        <br>
+                        <input class="texto" type="text" name="tel_particular" id="tel_particular" placeholder="TEL. FIJO">
+                        <br>
+                        <input class="texto" type="text" name="tel_celular" id="tel_celular" placeholder="TEL. CELULAR">
+                        <br>
+                        <input type="submit" value="Registrar Usuarios" class="boton">
+                    </form>
+        </div>
+
+
+        <div class="id-card-container3">
+                    <h4>LOGIN DEL ADMINISTRADOR</h4>
+                    <form action="login_admin.jsp" method="post" onsubmit="return iniciar_sesiona()">
+                        <br>
+                        <input class="texto" name="usuario_admin" type="text" id="usuario_admin" placeholder="USUARIO">
+                        <br>
+                        <input class="texto" name="contra_admin" type="password" id="contra_admin" placeholder="CONTRASEÑA">
+                        <br>
+                        <input type="submit" value="Iniciar sesión" class="boton">
+                    </form>
+        </div>
+
+
+        <div class="id-card-container4">
+                    <h4>REGISTRAR ADMINISTRADOR</h4>
+                    <form action="registro_admin.jsp" method="post" onsubmit="return registrara()">
+                        <br>
+                        <input class="texto" name="usu_admin" type="text" id="usu_admin" placeholder="USUARIO">
+                        <br>
+                        <input class="texto" name="contraseña_admin" type="password" id="contraseña_admin" placeholder="CONTRASEÑA">
+                        <br>
+                        <input type="submit" value="Registrar Administrador" class="boton">
+                    </form>
+        </div>
+
+        <br>
+        <br>
+
+
+
+        <footer>
+            <h5>Integrantes:</h5>
+            <ol>
+                <li>Cerecedo Ramírez Sebastián</li>
+                <li>Núñez Ramírez Valery Aylin</li>
+                <li>Rivas Gutiérrez Leonardo</li>
+            </ol>
+        </footer>
+</body>
+</html>
