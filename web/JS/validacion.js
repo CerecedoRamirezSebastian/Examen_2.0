@@ -15,8 +15,9 @@ function registraru(){
     
     var pat = new RegExp(/^(([A-ZÁÉÍÑÓ]{1}[a-záéíñóúü]*)|([A-ZÁÉÍÑÓ]{1}[a-záéíñóúü]*,\s(de))|(((((de)|(del)|(De)|(Del)|(la)|(las)|(los))\s)?){1,2}([A-ZÁÉÍÑÓ]{1}[a-záéíñóúü\.]*))|([A-ZÁÉÍÑÓ]{1}[a-záéíñóúü]*\s)(((((de)|(del)|(De)|(Del)|(la)|(las)|(los))\s)?){1,2}([A-ZÁÉÍÑÓ]{1}[a-záéíñóúü\.]*)))$/);
     var pat1 = new RegExp(/^(([A-ZÁÉÍÓÚÑ]{1}[a-záéíóúüñ]*)(\s)?)((((((((de)|(del)|(la)|(las)|(los))\s)?)?){1,2})(([A-ZÁÉÍÑÓ]{1}[a-záéíñóúü\.]*)(\s([A-ZÁÉÍÑÓ]{1}[a-záéíñóúü\.]*))?){1})?)$/);
-    var pat2 = new RegExp(/4(\d{7})/g);
-    var pat3 = new RegExp(/^\(?0?[0-9]{2}\)?\s?9[0-9]{4}(-|\s)?[0-9]{3}$/);
+    //var pat2 = new RegExp(/4(\d{7})/g);
+    var pat3 = new RegExp(/55(\d{8})/);
+    var pat4 = new RegExp(/(\d{10})/);
     
     
     if(pat.test(cadena)=== false || pat.test(cadena1)===false){
@@ -64,7 +65,7 @@ function registraru(){
         return false;
     }
     
-    if(pat2.test(cadena12)=== false){
+    if(pat4.test(cadena12)=== false){
         alert("Teléfono de casa inválido");
         return false;
     }
@@ -77,7 +78,7 @@ function registraru(){
 
 
 
-/*function registrara(){
+function registrara(){
    var usuario = document.getElementById("usu_admin");
     var contraseña = document.getElementById("contraseña_admin");
     
@@ -112,9 +113,10 @@ function iniciar_sesiona(){
 
 function iniciar_sesionu(){
     var telefono = document.getElementById("tel_cel");
+    var pat4 = new RegExp(/(\d{10})/);
 
-    if(telefono === ""){
+    if(pat4.test(telefono)){
         alert("Campo usuario vacío");
         return false;
     }
-}*/
+}
