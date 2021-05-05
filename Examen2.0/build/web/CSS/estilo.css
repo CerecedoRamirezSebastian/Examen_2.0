@@ -1,0 +1,73 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: Arial;
+}
+
+.id-card-container1 h1{
+    margin-left: 42%;
+    padding-top: 40px;
+}
+
+.id-card-container2 h4{
+    margin-left: 35%;
+    padding-top: 70px;
+}
+
+.id-card-container3 h4{
+    margin-left: 10%;
+    padding-top: 70px;
+}
+
+.id-card-container4 h4{
+    margin-left: 10%;
+    padding-top: 70px;
+}
+
+.texto{
+    margin-top: 7px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    margin: 10px;
+    font-size: 17px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+div{
+    width: 40%;
+    margin-left: 31%; 
+}
+
+h1, h4{
+    font-size: 30px;
+}
+
+.boton{
+    width: 50%;
+    background-color: #40916c;
+    color: white;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-left: 25%;
+    padding: 20px;
+}
+
+footer{
+    padding-left: 5%;
+    color: white;
+    background-color: white;
+    padding: 70px;
+    background-color: #1b4332;
+}
+
+footer h5{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+footer li{
+    font-size: 20px;
+    padding-bottom: 5px;
+}

@@ -1,0 +1,47 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+div{
+    padding-left: 21%;
+}
+
+input{
+    margin-top: 7px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    padding-left: 10px;
+    width: 48%;
+    margin: 10px;
+    font-size: 17px;
+}
+
+.boton{
+    margin-top: 7px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 50%;
+    background-color: #40916c;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+h1{
+    margin-left: 20%;
+    padding-top: 25px;
+    font-size: 20px;
+    font-family: Arial;
+}
+.container{
+    margin-left: 13%;
+}
+
+.a1{
+    margin-left: 30px; 
+}
+.a2{
+    margin-left: 30px;
+}
